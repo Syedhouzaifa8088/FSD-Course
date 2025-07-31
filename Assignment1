@@ -1,0 +1,103 @@
+<head>
+<script language= "javascript">
+function f1()
+{
+name=window.prompt("enter your name");
+if(name!=null && name!="")
+{
+alert("Hello" +name+ "How are you!");
+}
+}
+
+function f2()
+{
+ a=window.confirm("submit the form?");
+if(a==true)
+{
+alert("submitted");
+}
+else
+{
+alert("cancel");
+}
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="f1()" value="show a promt box">
+<input type="button" onclick="f2()" value="show a confirm box">
+</body>
+
+<head>
+<script language = "javascript">
+function f3()
+{
+var n=window.prompt("enter your name");
+var r=window.prompt("enter your age");
+if(n!=null && n!="" && r!=null && r!="")
+{
+alert("Hello "+ n +" your age is "+ r +" years old");
+}
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="f3()" value="details">
+</body>
+
+
+<head>
+<script language = "javascript">
+function f4()
+{
+var StudentName= "Houzaifa";
+alert("Name:" + StudentName );
+}
+</head>
+</script>
+
+<body>
+<input type="button" onclick="f4()" value="Name">
+</body>
+
+
+<head>
+<script language = "javascript">
+function f4()
+{
+var StudentName= "Houzaifa";
+alert("Original Name:" + StudentName );
+
+var Oldname = "Houzaifa";
+var StudentName= "Syed";
+
+alert("Original Name :" + Oldname + "\nNew name :" + StudentName );
+}
+</script>
+</script>
+
+<body>
+<input type="button" onclick="f4()" value="alert">
+</body>
+
+
+
+<head>
+<script language = "javascript">
+var City = "Chennai";
+
+function showCity()
+{
+var City = "Chennai";
+document.write("<p>" + City + "</p>");
+}
+
+showCity();
+document.write("<p>" + City + "</p>");
+
+</head>
+</script>
+<body>
+</body>
