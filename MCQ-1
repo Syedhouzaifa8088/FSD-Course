@@ -1,0 +1,402 @@
+1.What is the correct syntax to print a message in the console in JavaScript?
+A. console.print("Hello")
+B. print("Hello")
+C. log.console("Hello")
+D. console.log("Hello")
+Ans: D.console.log("Hello")
+
+2.Which of the following is a primitive data type in JavaScript?
+A. Array
+B. Object
+C. String 
+D. Function
+Ans: C.string
+
+3.What will be the output of: typeof null?
+A. "null"
+B. "object"
+C. "undefined"
+D. "number"
+Ans: c.undefined
+
+4.What will 2 + '2' evaluate to in JavaScript?
+A. 4
+B. 22 
+C. NaN
+D. Error
+ans: a. 4
+
+5.Which function is used to parse a string to an integer in JavaScript?
+A. parseFloat()
+B. parseInt() 
+C. Number.toInt()
+D. int()
+ans: B. parseInt()
+
+6.What does === operator do in JavaScript?
+A. Compares only value
+B. Compares only type
+C. Compares both value and type 
+D. Assigns value
+ans: C. Compares both value and type 
+
+7.Which of the following will return true?
+A. Object.is(NaN, NaN) 
+B. NaN === NaN
+C. null === undefined
+D. [] === []
+ans: B. NaN === NaN 
+
+8.What will the following output?
+console.log([10] + [20]);
+A. 30
+B. "1020" 
+C. NaN
+D. [10, 20]
+ans: B. "1020" 
+
+9.Which one is a valid way to declare a constant?
+A. constant PI = 3.14
+B. let PI = 3.14
+C. const PI = 3.14 
+D. var PI = 3.14
+ans:  const PI = 3.14 
+
+10. What does isNaN("10") return?
+A. true
+B. false 
+C. NaN
+D. 10
+ans: A. true
+
+11.Which is a valid arrow function?
+A. let f => () {}
+B. let f = () -> {}
+C. let f = () => {} 
+D. let f = -> () {}
+ans: B. let f = () -> {}
+
+
+12.Which is the correct way to get an element by ID?
+A. getElement("id")
+B. document.id("id")
+C. document.getElementById("id") 
+D. document.queryById("id")
+ans: C. document.getElementById("id") 
+
+13.What is the result of true + false?
+A. true
+B. false
+C. 1 
+D. NaN
+ans: C. 1 
+
+14.What is the result of '5' - 2?
+A. "3"
+B. 3 
+C. NaN
+D. "52"
+ans: B. 3 
+
+ 15.JavaScript is:
+A. Compiled
+B. Interpreted 
+C. Both compiled and interpreted
+D. Not a programming language
+ans: B. Interpreted 
+
+
+16.What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+var js = 10;
+js *= 5;
+document.getElementById("demo").innerHTML = js;
+</script>
+a) 10
+b) 50
+c) 5
+d) Error
+ans: d) Error
+
+17.What will be the output of the following JavaScript code snippet?
+
+// JavaScript Equalto Operators
+function equalto()
+{
+    let num=10;
+    if(num==="10")
+        return true;
+    else
+        return false;
+}
+a) false
+b) true
+c) compilation error
+d) runtime error
+ans: a) false
+
+18.Will the following JavaScript code work?
+
+var js = (function(x) {return x*x;}(10));
+a) Exception will be thrown
+b) Memory leak
+c) Error
+d) Yes, perfectly
+ans: c) Error
+
+19.What will be the output of the following JavaScript code snippet?
+
+int a=1;
+if(a!=null) // JavaScript not equal to Operators
+    return 1;
+else
+    return 0;
+a) 0
+b) 1
+c) compiler error
+d) runtime error
+ans: d) runtime error
+
+
+20.What will be the output of the following JavaScript code?
+
+// Javascript code snippet to compare the height
+function height()
+{	
+    var  height = 123.56;
+    var type = (height>=190) ? "tall" : "short";
+    return type;
+}
+a) short
+b) 123.56
+c) tall
+d) 190
+ans: a) short
+
+21.What will be the output of the following JavaScript function?
+
+<p id="demo"></p>
+<script>
+function javascript() 
+{
+// javacript abs() method
+    document.getElementById("demo").innerHTML = Math.abs(-7.25);
+}
+</script>
+a) -7.25
+b) 7.25
+c) -7
+d) 7
+ans: b) 7.25
+
+22.Which is a more efficient JavaScript code snippet?
+Code 1 :
+
+// for loop in javascript
+for(var num=10;num>=1;num--)
+{
+           document.writeln(num);
+}
+Code 2 :
+
+var num=10;
+while(num>=1)
+{
+       document.writeln(num);
+       num++;
+}
+a) Code 1
+b) Code 2
+c) Both Code 1 and Code 2
+d) Cannot Compare
+ans: d) Cannot Compare
+
+
+23.What happens in the following JavaScript code snippet?
+
+var js = 0;
+while (js < 10) 
+{
+     console.log(js);
+     js++;
+}
+a) An exception is thrown
+b) The values of js are logged or stored in a particular location or storage
+c) The value of js from 0 to 9 is displayed in the console
+d) An error is displayed
+ans: b) The values of js are logged or stored in a particular location or storage
+
+24.What will be the output of the following JavaScript code?
+
+function range(int javascript)
+{
+	int a=5;
+	for(int i=0;i<javascript;i++)
+	{
+		console.log(a);
+	} 
+}
+range(3);
+a) 2
+b) 5
+c) 555
+d) error
+ans: b) 5
+
+25.What will be the output of the following JavaScript code?
+
+var quiz=[1,2,3];  
+var js=[6,7,8];  
+var result=quiz.concat(js);  
+document.writeln(result);
+a) 1, 2, 3, 6, 7, 8
+b) 123
+c) 1, 2, 3
+d) Error
+ans: a) 1, 2, 3, 6, 7, 8
+
+26.What will be the output of the following JavaScript code?
+
+int a=0;
+for(a;a<5;a++);
+console.log(a);
+a) 4
+b) 5
+c) 0
+d) error
+ans: d) error
+
+27.What will be the output of the following JavaScript code?
+
+function compare()
+{
+    let sanfoundry=1;
+    let javascript="1";
+    if(sanfoundry.toString()===javascript)
+        return true;
+    else 
+        return false;
+}
+a) runtime error
+b) logical error
+c) true
+d) false
+ans: c) true
+
+28.The pop() method of the array does which of the following task?
+a) decrements the total length by 1
+b) increments the total length by 1
+c) prints the first element but no effect on the length
+d) updates the element
+
+
+29.What will be the shift() output of the following JavaScript code?
+
+var a = []; 
+a.unshift(1); 
+a.unshift(22);
+a.shift(); 
+a.unshift(3,[4,5]); 
+a.shift();
+a.shift();
+var output = a.shift();
+document.writeln(output);
+a) 1
+b) [4,5]
+c) [3,4,5]
+d) Exception is thrown
+ans: c) [3,4,5]
+
+30.What will be the output of the following JavaScript code?
+
+var values=["one","two","Three"];  
+var ans=values.shift();  
+document.writeln(ans);
+a) one
+b) two
+c) three
+d) error
+ans: a) one
+
+31.When does JavaScript code appear inline within an HTML file?
+a) Between the “script” tag
+b) Outside the “script” tag
+c) Between or Outside the “script” tag
+d) Between the header tag
+ans: a) Between the “script” tag
+32.What will be the output of the following JavaScript code?
+
+<p id="demo"></p>
+<script>
+var arr = ["1", "1", "2", "1"];
+var a = arr.lastIndexOf("1");
+document.getElementById("demo").innerHTML = (a + 1);
+</script>
+a) 2
+b) 3
+c) 4
+d) 0
+ans: d. 4
+=============================
+1.What will be the output of the following code snippet?
+
+const example = ({ a, b, c }) => {
+ console.log(a, b, c);
+};
+example(0, 1, 2);
+ans:a, b, c
+
+
+
+2.What will be the output of the following code snippet?
+
+function solve(arr, rotations){
+ if(rotations == 0) return arr;
+ for(let i = 0; i < rotations; i++){
+   let element = arr.pop();
+   arr.unshift(element);
+ }
+ return arr;
+}
+// solve([44, 1, 22, 111], 5);
+
+
+3.What will be the output of the following code snippet?
+
+var a = "hello";
+var sum = 0;
+for(var i = 0; i < a.length; i++) {
+   sum += (a[i] - 'a');
+}
+print(sum);
+
+
+
+4.What will be the output of the following code snippet?
+
+<script type="text/javascript" language="javascript">
+  
+var a = "Scaler";
+var result = a.substring(2, 4);
+document.write(result);
+  
+</script>
+output:a e
+
+5.What will the following code output?
+let x = 10;
+if (x = 5) {
+  console.log("True");
+} else {
+  console.log("False");
+}
+output: false
+======================
+
+
+
+
+
+
