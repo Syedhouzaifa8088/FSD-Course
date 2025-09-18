@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Feedback Survey</title>
+</head>
+<body style="font-family:Arial, sans-serif; margin:20px; background:#f9f9f9;">
+
+  <!-- Header -->
+  <header style="text-align:center; padding:15px; background:#4CAF50; color:white; border-radius:6px;">
+    <h1>Website Feedback Survey</h1>
+    <p>We value your opinion. Please take a minute to share your thoughts.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav style="margin:20px 0; text-align:center;">
+    <a href="#" style="margin:0 10px; text-decoration:none; color:#333;">Home</a>
+    <a href="#" style="margin:0 10px; text-decoration:none; color:#333;">About</a>
+    <a href="#" style="margin:0 10px; text-decoration:none; color:#333;">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="max-width:700px; margin:auto; background:white; padding:20px; border:1px solid #ccc; border-radius:10px;">
+
+    <!-- Section 1: Personal Info -->
+    <section style="margin-bottom:20px;">
+      <h2 style="color:#4CAF50;">Personal Information</h2>
+      <form action="submit_feedback.php" method="post">
+        
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="fullname" required 
+               style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required 
+               style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="10" max="100" 
+               style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+        <!-- Section 2: Website Rating -->
+        <section style="margin-bottom:20px;">
+          <h2 style="color:#4CAF50;">Website Rating</h2>
+
+          <label for="design">Rate Website Design (1–10):</label><br>
+          <input type="range" id="design" name="design" min="1" max="10" 
+                 style="width:95%; margin:10px 0;"><br><br>
+
+          <label>Rate Content Quality:</label><br>
+          <input type="radio" name="content" value="Excellent" required> Excellent 
+          <input type="radio" name="content" value="Good"> Good 
+          <input type="radio" name="content" value="Average"> Average 
+          <input type="radio" name="content" value="Poor"> Poor <br><br>
+
+          <label for="page">Most Visited Page:</label><br>
+          <select id="page" name="page" style="padding:6px; border:1px solid #aaa;">
+            <option value="Home">Home</option>
+            <option value="Blog">Blog</option>
+            <option value="Products">Products</option>
+            <option value="Contact">Contact</option>
+          </select>
+        </section>
+
+        <!-- Section 3: Suggestions -->
+        <section style="margin-bottom:20px;">
+          <h2 style="color:#4CAF50;">Suggestions</h2>
+          <label for="comments">Your Suggestions:</label><br>
+          <textarea id="comments" name="comments" rows="4" 
+                    style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"></textarea><br><br>
+
+          <input type="checkbox" name="contact_permission"> I agree to be contacted regarding my feedback
+        </section>
+
+        <!-- Submit -->
+        <div style="text-align:center;">
+          <input type="submit" value="Submit Feedback" 
+                 style="padding:10px 20px; border:none; border-radius:6px; background:#4CAF50; color:white; cursor:pointer;">
+          <input type="reset" value="Reset" 
+                 style="padding:10px 20px; border:none; border-radius:6px; background:#999; color:white; cursor:pointer;">
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Aside -->
+  <aside style="max-width:700px; margin:20px auto; text-align:center; font-style:italic; color:#555;">
+    "Your feedback helps us improve our website experience for everyone."
+  </aside>
+
+  <!-- Footer -->
+  <footer style="text-align:center; padding:10px; margin-top:20px; color:#777; border-top:1px solid #ccc;">
+    © 2025 Website Survey
+  </footer>
+
+</body>
+</html>

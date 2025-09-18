@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Furniture Store Catalog</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .product-card h3 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #222;
+    }
+
+    .product-card button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .product-card button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Elegant Living Furniture</h1>
+    <p>Your Comfort, Our Style</p>
+  </header>
+
+  <section class="products">
+    <!-- Product 1 (Default) -->
+    <div class="product-card">
+      <img src="https://woodentwist.com/cdn/shop/products/LSHAPESOFA1.jpg?v=1743256909text=Sofa" alt="Sofa">
+      <h3>Classic Sofa</h3>
+      <p>Comfortable 3-seater sofa with premium fabric.</p>
+      <div class="price">$499</div>
+      <button>Buy Now</button>
+    </div>
+
+    <!-- Product 2 (With inline background color + text color) -->
+    <div class="product-card" style="background-color: #fffbe6;">
+      <img src="https://www.rajwadafurnish.com/cdn/shop/files/Devanti-Traditional-Solid-Wood-6-Seater-Dining-Table-Sets-natural-rajawada-furnish.webp?v=1737914786&width=1300 text=Table" alt="Dining Table">
+      <h3 style="color: darkgreen;">Wooden Dining Table</h3>
+      <p>Elegant 6-seater wooden dining table for family meals.</p>
+      <div class="price">$799</div>
+      <button>Buy Now</button>
+    </div>
+
+    <!-- Product 3 (With inline button style) -->
+    <div class="product-card">
+      <img src="https://dukaan.b-cdn.net/700x700/webp/upload_file_service/505066f0-9ed0-41b3-9c77-3f4d0a01c779/71pbghxxbnl-400x.webptext=Chair" alt="Chair">
+      <h3>Office Chair</h3>
+      <p>Ergonomic chair with adjustable height and back support.</p>
+      <div class="price">$199</div>
+      <button style="background-color: orange; color: black;">Buy Now</button>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Grocery Order</title>
+</head>
+<body style="font-family:Arial, sans-serif; background:#f5f5f5; padding:20px;">
+
+  <h2 style="text-align:center; color:#333;">Online Grocery Order</h2>
+
+  <form action="order.php" method="post" style="max-width:700px; margin:auto; background:#fff; padding:20px; border-radius:10px; border:1px solid #ccc;">
+
+    <!-- Customer Details -->
+    <fieldset style="margin-bottom:20px; padding:15px; border:1px solid #aaa; border-radius:8px; background:#fafafa;">
+      <legend style="font-weight:bold; color:#4CAF50;">Customer Details</legend>
+
+      <label>Full Name:</label><br>
+      <input type="text" name="fullname" placeholder="Enter your full name" required autofocus 
+             style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="email" placeholder="Enter your email" required 
+             style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+      <label>Mobile Number:</label><br>
+      <input type="tel" name="mobile" placeholder="10-digit number" pattern="[0-9]{10}" required 
+             style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+      <label>Delivery Address:</label><br>
+      <textarea name="address" rows="3" placeholder="Enter delivery address" required 
+                style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"></textarea>
+    </fieldset>
+
+    <!-- Order Details -->
+    <fieldset style="margin-bottom:20px; padding:15px; border:1px solid #aaa; border-radius:8px; background:#fafafa;">
+      <legend style="font-weight:bold; color:#4CAF50;">Order Details</legend>
+
+      <label>Grocery Items:</label><br>
+      <input type="checkbox" name="items" value="Rice"> Rice 
+      <input type="checkbox" name="items" value="Milk"> Milk 
+      <input type="checkbox" name="items" value="Bread"> Bread 
+      <input type="checkbox" name="items" value="Eggs"> Eggs 
+      <input type="checkbox" name="items" value="Sugar"> Sugar <br><br>
+
+      <label>Quantity (1–10):</label><br>
+      <input type="number" name="quantity" min="1" max="10" value="1" 
+             style="width:80px; padding:6px; border:1px solid #aaa;"><br><br>
+
+      <label>Delivery Date:</label><br>
+      <input type="date" name="deliverydate" required 
+             style="padding:6px; border:1px solid #aaa;"><br><br>
+
+      <label>Preferred Delivery Time:</label><br>
+      <input type="time" name="deliverytime" 
+             style="padding:6px; border:1px solid #aaa;"><br><br>
+
+      <label>Payment Method:</label><br>
+      <input type="radio" name="payment" value="COD" required> Cash on Delivery
+      <input type="radio" name="payment" value="UPI"> UPI
+      <input type="radio" name="payment" value="Card"> Card
+    </fieldset>
+
+    <!-- Special Instructions -->
+    <fieldset style="margin-bottom:20px; padding:15px; border:1px solid #aaa; border-radius:8px; background:#fafafa;">
+      <legend style="font-weight:bold; color:#4CAF50;">Special Instructions</legend>
+      <textarea name="instructions" rows="3" placeholder="Any additional notes (optional)" 
+                style="width:95%; padding:8px; border:1px solid #aaa;"></textarea>
+    </fieldset>
+
+    <!-- Confirm + Buttons -->
+    <div style="margin-bottom:15px;">
+      <input type="checkbox" name="confirm" required> I confirm my order
+    </div>
+
+    <div style="text-align:center;">
+      <input type="submit" value="Submit Order" 
+             style="padding:10px 20px; margin:5px; border:none; border-radius:6px; background:#4CAF50; color:white; cursor:pointer;">
+      <input type="reset" value="Reset" 
+             style="padding:10px 20px; margin:5px; border:none; border-radius:6px; background:#999; color:white; cursor:pointer;">
+    </div>
+
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conference Registration</title>
+</head>
+<body style="font-family:Arial, sans-serif; margin:20px; background:#f0f2f5;">
+
+  <h1 style="text-align:center; color:#333;">Conference Registration Form</h1>
+
+  <form action="submit.php" method="post" enctype="multipart/form-data" 
+        style="max-width:700px; margin:auto; background:#fff; padding:20px; border:1px solid #ccc; border-radius:10px;">
+
+    <!-- Personal Info -->
+    <div style="margin-bottom:20px; padding:15px; border:1px solid #ddd; border-radius:8px; background:#fafafa;">
+      <h2 style="margin-top:0; color:#4CAF50;">1. Personal Information</h2>
+      <label>Full Name *</label><br>
+      <input type="text" name="fullname" style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br>
+      <small style="color:#666;">Enter your full name.</small><br><br>
+
+      <label>Email Address *</label><br>
+      <input type="text" name="email" style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br>
+      <small style="color:#666;">Format: user@example.com</small><br><br>
+
+      <label>Gender *</label><br>
+      <input type="radio" name="gender" value="Male"> Male 
+      <input type="radio" name="gender" value="Female"> Female 
+      <input type="radio" name="gender" value="Other"> Other<br><br>
+
+      <label>Country *</label><br>
+      <select name="country" style="padding:6px; border:1px solid #aaa; width:50%;">
+        <option value="">--Select--</option>
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+        <option>Canada</option>
+        <option>Australia</option>
+      </select><br><br>
+
+      <label>Profile Photo *</label><br>
+      <input type="file" name="profile"><br>
+    </div>
+
+    <!-- Account Preferences -->
+    <div style="margin-bottom:20px; padding:15px; border:1px solid #ddd; border-radius:8px; background:#fafafa;">
+      <h2 style="margin-top:0; color:#4CAF50;">2. Account Preferences</h2>
+      <label>Username *</label><br>
+      <input type="text" name="username" style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+      <label>Password *</label><br>
+      <input type="password" name="password" style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+      <label>Confirm Password *</label><br>
+      <input type="password" name="confirm" style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+      <label>Interests</label><br>
+      <input type="checkbox" name="int1" value="Web Dev"> Web Development 
+      <input type="checkbox" name="int2" value="AI"> AI 
+      <input type="checkbox" name="int3" value="Cloud"> Cloud 
+      <input type="checkbox" name="int4" value="Networking"> Networking<br><br>
+
+      <label>Preferred Contact Method *</label><br>
+      <input type="radio" name="contact" value="Email"> Email 
+      <input type="radio" name="contact" value="Phone"> Phone 
+      <input type="radio" name="contact" value="SMS"> SMS<br><br>
+
+      <label>Special Requirements / Comments</label><br>
+      <textarea name="comments" rows="4" style="width:95%; padding:8px; border:1px solid #aaa;"></textarea>
+    </div>
+
+    <!-- Payment Details -->
+    <div style="margin-bottom:20px; padding:15px; border:1px solid #ddd; border-radius:8px; background:#fafafa;">
+      <h2 style="margin-top:0; color:#4CAF50;">3. Payment Details</h2>
+      <label>Payment Method *</label><br>
+      <select name="payment" style="padding:6px; border:1px solid #aaa; width:50%;">
+        <option value="">--Select--</option>
+        <option>Credit Card</option>
+        <option>Debit Card</option>
+        <option>PayPal</option>
+      </select><br><br>
+
+      <label>Card Number *</label><br>
+      <input type="text" name="cardnum" style="width:95%; padding:8px; margin:6px 0; border:1px solid #aaa;"><br><br>
+
+      <label>Expiry Date *</label><br>
+      <select name="month" style="padding:6px; border:1px solid #aaa;">
+        <option>Month</option>
+        <option>01</option><option>02</option><option>03</option><option>04</option>
+        <option>05</option><option>06</option><option>07</option><option>08</option>
+        <option>09</option><option>10</option><option>11</option><option>12</option>
+      </select>
+      <select name="year" style="padding:6px; border:1px solid #aaa;">
+        <option>Year</option>
+        <option>2025</option><option>2026</option><option>2027</option><option>2028</option>
+      </select><br><br>
+
+      <label>CVV *</label><br>
+      <input type="password" name="cvv" size="3" style="padding:6px; border:1px solid #aaa;"><br><br>
+
+      <input type="checkbox" name="terms"> I agree to the Terms & Conditions *
+    </div>
+
+    <!-- Buttons -->
+    <div style="text-align:center;">
+      <input type="submit" value="Submit" 
+             style="padding:10px 20px; border:none; border-radius:6px; background:#4CAF50; color:white; cursor:pointer; margin:5px;">
+      <input type="reset" value="Reset" 
+             style="padding:10px 20px; border:none; border-radius:6px; background:#999; color:white; cursor:pointer; margin:5px;">
+    </div>
+
+  </form>
+
+</body>
+</html>
