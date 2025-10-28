@@ -1,0 +1,786 @@
+What is a callback in JavaScript?
+A. A function that is executed immediately
+B. A function passed as an argument to be called later
+C. A built‑in JavaScript function
+D. A Promise method
+ans: B. A function passed as an argument to be called later
+
+Which of the following is a major drawback of using callbacks for asynchronous logic?
+A. They are too fast
+B. They don’t support errors
+C. Callback hell / deep nesting
+D. They return Promises automatically
+ans: C. Callback hell / deep nesting
+
+What does resolve do inside a Promise’s executor?
+A. Terminates the program
+B. Marks the Promise as fulfilled with a given value
+C. Marks it as rejected
+D. Cancels the Promise
+ans:B. Marks the Promise as fulfilled with a given value
+
+What does reject do inside a Promise’s executor?
+A. Marks the Promise as fulfilled
+B. Marks the Promise as rejected with a reason
+C. Converts the Promise to synchronous code
+D. Delays the Promise
+ans:B. Marks the Promise as rejected with a reason
+
+What are the three states of a Promise?
+A. Waiting, Done, Error
+B. Pending, Fulfilled, Rejected
+C. Started, Completed, Failed
+D. Ready, Busy, Done
+ans:B. Pending, Fulfilled, Rejected
+
+Once a Promise is fulfilled, can it change state?
+A. Yes, it can become rejected
+B. Yes, it can revert to pending
+C. No, it is settled and cannot change
+D. Yes, depending on .then()
+ans:C. No, it is settled and cannot change
+
+What does .then() return?
+A. Nothing
+B. The original Promise
+C. A new Promise
+D. A callback
+ans: C. A new Promise
+
+If you return a non-Promise value inside a .then(), what happens?
+A. Error thrown
+B. It becomes the resolved value of the next .then()
+C. It is ignored
+D. It wraps in a rejected Promise
+ans:B. It becomes the resolved value of the next .then()
+
+If you return a Promise inside a .then(), the chain waits for it. True or false?
+A. True
+B. False
+ans:A. True
+
+How do you catch errors in a Promise chain?
+A. .error()
+B. .catch()
+C. .then()
+D. .finally()
+ans:B. .catch()
+
+What is Promise.all() used for?
+A. To race multiple promises
+B. To resolve when the first promise resolves
+C. To wait until all promises resolve or one rejects
+D. To convert callbacks to promises
+ans:C. To wait until all promises resolve or one rejects
+
+If one Promise in Promise.all([p1, p2, p3]) rejects, what happens?
+A. It continues with others
+B. The returned Promise rejects immediately
+C. It resolves with partial results
+D. It ignores the rejection
+ans:B. The returned Promise rejects immediately
+
+Which method always executes whether a Promise is fulfilled or rejected?
+A. .then()
+B. .catch()
+C. .finally()
+D. .always()
+ans:B. .catch()
+
+What does fetch() return?
+A. Synchronous data
+B. A Promise resolving to a Response object
+C. A JSON directly
+D. An XMLHttpRequest
+ans:B. A Promise resolving to a Response object
+
+In fetch usage, why is response.json() usually chained in .then()?
+A. It returns a callback
+B. It returns another Promise for parsed JSON
+C. It blocks execution
+D. It is synchronous
+ans: B. It returns another Promise for parsed JSON
+
+How do you check for HTTP error status using fetch()?
+A. response.error
+B. response.ok or response.status
+C. response.fail
+D. response.requested
+ans: 
+A. response.error
+
+
+What is the main advantage of async/await over then-chaining?
+A. It is faster
+B. It looks synchronous, easier to read
+C. It doesn’t use Promises
+D. It auto‑catches all errors
+ans: B. It looks synchronous, easier to read
+
+What must you put in front of a function to use await inside it?
+A. then
+B. callback
+C. async
+D. promise
+ans:C. async 
+
+What does await do?
+A. Converts value to Promise
+B. Pauses execution until the awaited Promise resolves or rejects
+C. Rejects the Promise
+D. Cancels the function
+ans: B. Pauses execution until the awaited Promise resolves or rejects
+
+How do you handle errors in an async function?
+A. Using .catch() outside
+B. Using try/catch within the function
+C. Using finally only
+D. Errors are ignored
+ans: B. Using try/catch within the function
+
+What does a rejected await expression cause?
+A. Returns undefined
+B. Throws an error you can catch in try/catch
+C. Converts to success
+D. Silently fails
+ans: B. Throws an error you can catch in try/catch
+
+What happens if you forget await on a Promise in an async function?
+A. The code stops
+B. You get the Promise object instead of value
+C. It throws automatically
+D. It is auto-awaited
+ans:A. The code stops
+
+Which of the following statements is true?
+A. Async/Await replaces Promises entirely
+B. Async functions always block the main thread
+C. Async/Await is syntactic sugar over Promises
+D. Promises are slower than callbacks
+ans:C. Async/Await is syntactic sugar over Promises
+
+How to convert a callback-style function to return a Promise?
+A. Use new Promise(...) and call resolve or reject inside
+B. Use Promise.callback()
+C. Wrap in async keyword
+D. Use then()
+ans:A. Use new Promise(...) and call resolve or reject inside
+
+Given:
+
+new Promise((resolve, reject) => {
+  throw new Error("Oops");
+}).catch(err => {
+  console.log("Caught:", err.message);
+});
+
+
+What prints?
+A. "Caught: Oops"
+B. Nothing
+C. Throws unhandled
+D. "Caught: undefined"
+ans:A. "Caught: Oops"
+
+Given:
+
+Promise.resolve(5)
+  .then(x => x * 2)
+  .then(x => console.log(x));
+
+
+What prints?
+A. 10
+B. Promise object
+C. undefined
+D. Error
+ans:A. 10
+
+What happens when .catch() is placed before .then() in a chain?
+A. .then() never executes
+B. The catch catches only errors from earlier promises
+C. It is invalid syntax
+D. .catch() is ignored
+ans:B. The catch catches only errors from earlier promises
+
+What’s the difference between Promise.resolve(value) and new Promise(resolve => resolve(value))?
+A. None, they behave similarly
+B. Promise.resolve rejects
+C. new Promise is synchronous
+D. One is callback-based
+ans:A. None, they behave similarly
+
+What is Promise.race()?
+A. Resolves when all resolve
+B. Rejects always
+C. Resolves or rejects with first settled promise
+D. Waits indefinitely
+ans:C. Resolves or rejects with first settled promise
+
+If you pass non-promise values in Promise.all([1, 2, Promise.resolve(3)]), what happens?
+A. Error
+B. They’re auto-wrapped in resolved Promises
+C. Ignored
+D. They block
+
+In promise chaining, what happens if you forget to return inside a .then()?
+A. The next .then() gets undefined
+B. It waits forever
+C. It skips next .then()
+D. It throws
+
+What is a “thenable”?
+A. An object with a then method
+B. A rejected Promise
+C. A callback function
+D. A special Promise type
+
+Which queue do .then/.catch callbacks go into?
+A. Macrotask / Task queue
+B. Microtask / Job queue
+C. Call stack
+D. Event loop main queue
+
+Which is processed first: microtask queue or task queue?
+A. Task queue
+B. Microtask queue
+C. Both equally
+D. Depends on timing
+
+Consider:
+
+console.log(1);
+Promise.resolve().then(() => console.log(3));
+console.log(2);
+
+
+What is printed (in order)?
+A. 1, 2, 3
+B. 1, 3, 2
+C. 3, 1, 2
+D. 2, 1, 3
+
+Which of these is invalid syntax for making a Promise?
+A. new Promise((resolve, reject) => { … })
+B. Promise((resolve, reject) => { … })
+C. new Promise(function (res, rej) { … })
+D. new Promise(async (res, rej) => { … })
+
+What will this code output?
+
+Promise.reject("err")
+  .then(() => console.log("then"))
+  .catch(e => console.log("catch", e));
+
+
+A. then
+B. catch err
+C. then catch
+D. Nothing
+
+What will this output?
+
+Promise.resolve("ok")
+  .catch(e => console.log("caught"))
+  .then(v => console.log(v));
+
+
+A. caught
+B. ok
+C. error
+D. nothing
+
+What does .finally() receive as parameter?
+A. The resolved value
+B. The rejection reason
+C. Neither — it gets no argument
+D. Always undefined
+
+Does .finally() return a Promise?
+A. Yes
+B. No
+C. Only if returned inside
+D. Only when used after .catch()
+
+What is a correct way to use fetch with async/await?
+A. const data = fetch(url);
+B. const res = await fetch(url); const data = await res.json();
+C. await fetch(url).json()
+D. try fetch(url)
+
+Can you use await outside an async function?
+A. Yes, always
+B. No (in standard JS)
+C. Only in modules
+D. In callbacks
+
+What is returned by an async function if you return the value 5?
+A. 5
+B. Promise resolved with 5
+C. Rejected promise
+D. Undefined
+
+If an async function throws an error, what is returned?
+A. The thrown value
+B. A rejected Promise with that error
+C. Undefined
+D. A resolved Promise
+
+In an async function, what happens if you don’t catch the rejection?
+A. It’s silent
+B. The returned Promise rejects, and you can .catch() outside
+C. Program crashes
+D. It resolves with undefined
+
+Which is correct to catch errors from multiple awaits?
+A. Use multiple catch statements
+B. Wrap each await separately
+C. Use one try/catch encompassing them
+D. Use .catch() after each
+
+If you do:
+
+async function f() {
+  return 10;
+}
+f().then(v => console.log(v));
+
+
+What prints?
+A. Promise
+B. 10
+C. undefined
+D. error
+
+What is the advantage of Promise.allSettled() over Promise.all()?
+A. It rejects immediately
+B. It returns status of all promises whether fulfilled or rejected
+C. It resolves only rejections
+D. It’s faster
+
+What is Promise.any()?
+A. Resolves when the first promise resolves
+B. Rejects when the first rejects
+C. Ignores all resolves
+D. Waits for all
+
+If you await a non-Promise value, what happens?
+A. Error
+B. It waits indefinitely
+C. It returns immediately that value
+D. Converts to Promise
+
+What is the term used for deeply nested callbacks?
+A. Callback Lotus
+B. Callback Pyramid / Callback Hell
+C. Callback Chain
+D. Callback Loop
+
+Which of these is a benefit of Promises over callbacks?
+A. Better error propagation
+B. Easier composition
+C. Cleaner chaining
+D. All of the above
+
+What happens if you throw inside a .then() callback?
+A. The error is swallowed
+B. It rejects the returned Promise, which .catch() can handle
+C. It returns undefined
+D. It breaks chaining
+
+What’s the output?
+
+Promise.resolve()
+  .then(() => {
+    return Promise.reject("fail");
+  })
+  .then(() => console.log("ok"))
+  .catch(e => console.log("err", e));
+
+
+A. ok
+B. err fail
+C. nothing
+D. err undefined
+
+Is it okay to mix .then() and async/await in same code?
+A. No
+B. Yes, though consistency is preferable
+C. Only in Node.js
+D. Only in browsers
+
+What is a “deferred” or “promise-deferred” pattern?
+A. A Promise that never resolves
+B. A wrapper with externally accessible resolve/reject
+C. A callback disguised as Promise
+D. Another name for .finally()
+
+Which of these is false about .then()?
+A. It accepts two callbacks (onFulfilled, onRejected)
+B. It always returns a new Promise
+C. It blocks until resolution
+D. It chains
+
+Which of the following is true about unhandled promise rejections?
+A. They always crash the program
+B. They may lead to warnings or errors depending on environment
+C. They are silently ignored always
+D. They convert to fulfill
+
+What does the term “Promise composition” mean?
+A. Combining multiple promises in logic
+B. Sorting promises
+C. Rewriting promises to callbacks
+D. Canceling promises
+
+Suppose you have:
+
+async function a() { throw "err"; }
+async function b() {
+  try {
+    await a();
+  } catch (e) {
+    console.log("caught in b");
+  }
+}
+b();
+
+
+What prints?
+A. nothing
+B. caught in b
+C. Uncaught error
+D. err
+
+What is the event loop’s role in Promise handling?
+A. Directly resolves Promises
+B. Manages promise callback execution via microtasks
+C. Converts callbacks to Promises
+D. Runs synchronous code
+
+What is the relation between microtasks and Promises?
+A. Promises schedule .then callbacks as microtasks
+B. They are unrelated
+C. Promises use tasks, not microtasks
+D. Microtasks block Promises
+
+In Node.js, which function converts callback-style APIs to Promise-based?
+A. Promise.callbackify()
+B. util.promisify()
+C. Promise.wrap()
+D. asyncify()
+
+What is the output?
+
+console.log("start");
+setTimeout(() => console.log("timeout"), 0);
+Promise.resolve().then(() => console.log("promise"));
+console.log("end");
+
+
+A. start, promise, end, timeout
+B. start, end, promise, timeout
+C. start, end, timeout, promise
+D. start, timeout, end, promise
+
+Why is .catch() often placed at the end of a promise chain?
+A. It catches any error from any prior step
+B. It must be last by syntax
+C. Otherwise it doesn’t work
+D. It automatically rethrows
+
+What happens when you await multiple promises in parallel using sequential awaits?
+A. They execute in parallel
+B. They execute one after the other
+C. They merge results
+D. They throw
+
+How to run multiple promises in parallel and wait for all using async/await?
+A. Use await one by one
+B. const [a, b] = await Promise.all([p1, p2]);
+C. await Promise.series([...])
+D. await Promise.parallel([…])
+
+What will this print?
+
+const f = async () => {
+  return Promise.resolve(2);
+};
+(async () => {
+  const r = await f();
+  console.log(r);
+})();
+
+
+A. 2
+B. Promise
+C. undefined
+D. error
+
+What is “unhandled promise rejection”?
+A. A Promise’s error is not caught
+B. A Promise is never created
+C. A Promise resolved with no .then()
+D. A Promise stuck in pending
+
+What strategy allows canceling a Promise?
+A. .cancel() method
+B. Using AbortController + fetch
+C. Promise.reject() externally
+D. Promises can’t be canceled natively
+
+Which of these is a correct pattern to catch fetch errors?
+A. .then().then().then()
+B. .then(...).catch(...)
+C. .catch(...).then(...)
+D. .finally().then()
+
+What is this code’s output?
+
+Promise.resolve(1)
+  .then(x => x + 1)
+  .then(x => { throw "err"; })
+  .then(x => console.log("ok", x))
+  .catch(e => console.log("error", e))
+  .then(() => console.log("after"));
+
+
+A. ok 2 then after
+B. error err then after
+C. after only
+D. ok only
+
+If .catch() handles an error and returns a value, does the chain continue?
+A. No
+B. Yes, with that value
+C. Only if .then() after
+D. It returns undefined
+
+How do you convert callback APIs to promise using Promise constructor?
+A. Passing callback as resolve
+B. Wrapping inside new Promise((resolve, reject) => { callback-style API; })
+C. Using Promise.callback()
+D. You cannot
+
+What is a common pattern for retrying a Promise on failure?
+A. .catch(() => promiseAgain())
+B. Use Promise.retry()
+C. Looping synchronous calls
+D. setTimeout outside promises
+
+What will this return?
+
+async function f() {
+  return await 5;
+}
+
+
+A. 5
+B. Promise
+C. undefined
+D. error
+
+In Promise.all(), are the results in the same order as input promises?
+A. Yes
+B. No
+C. Sometimes
+D. Only for resolved ones
+
+When using await, is code after it blocked?
+A. Yes entirely
+B. Only that async function is paused
+C. Blocks UI thread
+D. Blocks all code
+
+What is a potential pitfall of mixing await and .then()?
+A. No pitfall
+B. Harder error propagation or readability
+C. Slower code
+D. Doesn’t chain
+
+Which function can you use to wrap an array of promises but get all settled results?
+A. Promise.all()
+B. Promise.allSettled()
+C. Promise.race()
+D. Promise.any()
+
+What will this code print?
+
+async function test() {
+  try {
+    await Promise.reject("err");
+  } catch(e) {
+    console.log("caught", e);
+  }
+  console.log("continues");
+}
+test();
+
+
+A. caught err
+B. continues
+C. caught err then continues
+D. Nothing
+
+What happens if await fetch(...) rejects (network error)?
+A. It returns null
+B. It throws an error, caught by catch
+C. It returns response object
+D. It resolves with error
+
+What is the advantage of async/await in loops?
+A. Makes asynchronous loops look sequential
+B. Faster
+C. Doesn’t work
+D. No advantage
+
+What is a downside of using await in loops without optimizations?
+A. It parallelizes unintentionally
+B. It serializes sequentially — slower when parallel possible
+C. Syntax error
+D. It blocks UI
+
+Which of these is true?
+A. .then only handles fulfilled Promises
+B. .then can handle errors as second callback
+C. .then returns nothing
+D. .then blocks
+
+What is the result?
+
+const p = Promise.resolve(1);
+p.then(v => { console.log(v); return 2; });
+p.then(v => console.log("second", v));
+
+
+A. 1 then second 1
+B. 1 then 2
+C. 1 then second 2
+D. 2 then second 2
+
+What does this do?
+
+async function f() {
+  await null;
+  console.log("after null");
+}
+f();
+
+
+A. Throws
+B. Logs “after null”
+C. Nothing
+D. Logs undefined
+
+In promise chaining, when do .then() callbacks execute relative to synchronous code?
+A. Immediately
+B. On next microtask turn
+C. Before current code
+D. Never
+
+What is a benefit of .finally()?
+A. Always runs cleanup code
+B. Swallows errors
+C. Returns non-promise
+D. Repeats chain
+
+Consider:
+
+async function a() {
+  return fetch("bad-url");
+}
+(async () => {
+  const res = await a();
+  console.log("got", res);
+})().catch(e => console.log("outer catch", e));
+
+
+If fetch fails, what happens?
+A. In a, it returns rejected Promise
+B. await a() throws and goes to outer catch
+C. console.log("got", res) runs with undefined
+D. Script crashes
+
+Which of these statements is false?
+A. Async functions always return Promises
+B. You can’t use await in non-async functions
+C. Promises can be canceled natively
+D. .catch() handles rejections
+
+What is a good pattern to time-limit a Promise (e.g. timeout)?
+A. Promise.timeout()
+B. Wrap in Promise.race([original, timeoutPromise])
+C. Use setTimeout only
+D. Use .finally()
+
+What will this code output?
+
+Promise.resolve(1)
+  .then(x => x + 1)
+  .then(x => x + 1)
+  .then(x => console.log(x));
+
+
+A. 3
+B. 1
+C. 2
+D. undefined
+
+Which is the correct way to define a function returning a Promise?
+A. function f() { return x; }
+B. function f() { return new Promise(...) }
+C. async function f() { x; }
+D. function f() { resolve(x); }
+
+What is the output?
+
+Promise.resolve()
+  .then(() => console.log("A"))
+  .then(() => {
+    throw "err";
+  })
+  .catch(e => console.log("B", e))
+  .then(() => console.log("C"));
+
+
+A. A B err C
+B. A C
+C. A B
+D. B C
+
+Can an async function have no await inside it?
+A. No
+B. Yes — but it's just a function returning a Promise
+C. It errors
+D. It becomes synchronous
+
+Which is true about Promise.all()?
+A. It waits for the fastest
+B. It rejects when any promise rejects
+C. It ignores rejections
+D. It always resolves
+
+Which is true about Promise.allSettled()?
+A. It rejects on first rejection
+B. It gives array of {status, value/reason}
+C. It’s same as all
+D. It stops on first fulfillment
+
+What is the advantage of Promise.race()?
+A. Waits all
+B. Returns first result or failure
+C. Ignores all
+D. Combines all
+
+What is the output?
+
+async function f() {
+  return Promise.reject("err");
+}
+f().catch(e => console.log(e));
+
+
+A. err
+B. nothing
+C. Promise
+D. undefined
