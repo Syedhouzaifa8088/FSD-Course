@@ -326,8 +326,8 @@ b) Outside the “script” tag
 c) Between or Outside the “script” tag
 d) Between the header tag
 ans: a) Between the “script” tag
-32.What will be the output of the following JavaScript code?
 
+32.What will be the output of the following JavaScript code?
 <p id="demo"></p>
 <script>
 var arr = ["1", "1", "2", "1"];
@@ -361,6 +361,7 @@ function solve(arr, rotations){
  return arr;
 }
 // solve([44, 1, 22, 111], 5);
+ans: output: [111,44,1,22]
 
 
 3.What will be the output of the following code snippet?
@@ -371,7 +372,7 @@ for(var i = 0; i < a.length; i++) {
    sum += (a[i] - 'a');
 }
 print(sum);
-
+ans: output: NaN
 
 
 4.What will be the output of the following code snippet?
