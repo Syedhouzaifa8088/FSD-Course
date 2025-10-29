@@ -1,0 +1,531 @@
+React (25 Questions)
+
+React is a ___ library.
+A. JavaScript
+B. Python
+C. PHP
+D. Java
+ans: A. JavaScript
+
+React is used for building:
+A. User Interfaces
+B. Databases
+C. Servers
+D. Operating Systems
+ans: A. User Interfaces
+
+Who developed React?
+A. Google
+B. Facebook
+C. Microsoft
+D. Amazon
+ans: B. Facebook
+
+JSX stands for:
+A. JavaScript Xperience
+B. JavaScript XML
+C. Java Syntax Extension
+D. JSON Syntax
+ans: B. JavaScript XML
+
+Which command creates a new React app?
+A. npx create-react-app myApp
+B. npm start myApp
+C. node create myApp
+D. react new app
+ans: A. npx create-react-app myApp
+
+In React, data is passed from parent to child using:
+A. Props
+B. State
+C. Hooks
+D. Variables
+ans: A. Props
+
+What is the correct syntax to create a function component?
+A. function MyComponent() { return <h1>Hello</h1>; }
+B. MyComponent = <h1>Hello</h1>
+C. def MyComponent()
+D. class MyComponent()
+ans: A. function MyComponent() { return <h1>Hello</h1>; }
+
+Which hook is used to add state to functional components?
+A. useState()
+B. useEffect()
+C. useMemo()
+D. useRef()
+ans: A. useState()
+
+What is the purpose of useEffect()?
+A. To perform side effects
+B. To store data
+C. To style components
+D. To create state
+ans: A. To perform side effects
+
+React components return:
+A. Strings
+B. JSX
+C. Functions
+D. Objects
+ans: B. JSX
+
+Which file contains the root component of a React app?
+A. App.js
+B. Index.html
+C. Server.js
+D. Style.css
+ans: A. App.js
+
+How can you start a React development server?
+A. npm start
+B. npm install
+C. npm build
+D. node app.js
+ans: B. npm install
+
+React applications are usually:
+A. Single Page Applications (SPA)
+B. Multi Page Applications
+C. Server Applications
+D. Desktop Applications
+ans: A. Single Page Applications (SPA)
+
+What is ReactDOM used for?
+A. Rendering components to the DOM
+B. Creating routes
+C. Managing state
+D. Styling elements
+
+What is the Virtual DOM?
+A. A lightweight copy of the real DOM
+B. The actual browser DOM
+C. A CSS framework
+D. A database
+ans: A. A lightweight copy of the real DOM
+
+Props in React are:
+A. Read-only
+B. Mutable
+C. Functions
+D. Optional
+ans: A. Read-only
+
+Which command builds a React app for production?
+A. npm run build
+B. npm start
+C. node build
+D. react build
+ans: A. npm run build
+
+What does JSX look like?
+A. HTML inside JavaScript
+B. CSS inside HTML
+C. SQL
+D. JSON
+ans: A. HTML inside JavaScript
+
+Which of the following is a valid React element?
+A. <h1>Hello</h1>
+B. <h1>Hello>
+C. h1("Hello")
+D. tag.h1
+ans: 
+A. <h1>Hello</h1>
+
+React components can be of type:
+A. Functional or Class
+B. HTML or CSS
+C. Static or Dynamic
+D. Object or Array
+ans: B. HTML or CSS
+
+What is the default port for a React app?
+A. 3000
+B. 8080
+C. 4000
+D. 5000
+ans: A. 3000
+
+Which hook helps share values across components?
+A. useContext()
+B. useState()
+C. useEffect()
+D. useMemo()
+ans: A. useContext()
+
+Which React feature improves performance?
+A. Virtual DOM
+B. Real DOM
+C. setTimeout()
+D. window.alert()
+ans:A. Virtual DOM
+
+How can you handle events in React?
+A. Using event handlers like onClick
+B. Using HTML onclick
+C. Using addEventListener only
+D. Using CSS
+ans: B. Using HTML onclick
+
+Which function is used to render a React app?
+A. ReactDOM.render()
+B. renderDOM()
+C. React.render()
+D. App.render()
+ans: A. ReactDOM.render()
+
+⚙️ Node.js (25 Questions)
+
+Node.js is:
+A. A JavaScript runtime environment
+B. A database
+C. A CSS framework
+D. A compiler
+ans: A. A JavaScript runtime environment
+
+Node.js runs on:
+A. Chrome’s V8 engine
+B. Firefox engine
+C. Internet Explorer
+D. Python engine
+ans: A. Chrome’s V8 engine
+
+Which command checks the Node.js version?
+A. node -v
+B. node --new
+C. node --start
+D. npm -start
+ans: A. node -v
+
+Which command initializes a Node.js project?
+A. npm init
+B. node start
+C. npm create
+D. node run
+ans: A. npm init
+
+Which file stores project dependencies?
+A. package.json
+B. server.js
+C. app.js
+D. config.js
+ans: A. package.json
+
+What is npm used for?
+A. Installing and managing packages
+B. Compiling code
+C. Testing APIs
+D. Creating HTML files
+ans: A. Installing and managing packages
+
+Which module is used to create an HTTP server?
+A. http
+B. fs
+C. url
+D. path
+ans: A. http
+
+How do you import a module in Node.js (CommonJS)?
+A. require('module_name')
+B. import module_name
+C. include module_name
+D. use module_name
+ans: A. require('module_name')
+
+How do you export a module?
+A. module.exports = functionName
+B. export(functionName)
+C. node.export()
+D. send functionName
+ans: A. module.exports = functionName
+
+Which module is used to work with the file system?
+A. fs
+B. http
+C. url
+D. os
+ans: A. fs
+
+Which command installs Express.js?
+A. npm install express
+B. npm add express.js
+C. express install
+D. node install express
+ans: A. npm install express
+
+Express.js is:
+A. A web application framework for Node.js
+B. A database tool
+C. A compiler
+D. A testing library
+ans: A. A web application framework for Node.js
+
+Which function starts an Express server?
+A. app.listen(3000)
+B. app.run()
+C. node.start()
+D. express()
+ans: A. app.listen(3000)
+
+Which method sends data to the client?
+A. res.send()
+B. res.show()
+C. res.output()
+D. res.text()
+ans: A. res.send()
+
+Which module is used for working with file paths?
+A. path
+B. fs
+C. net
+D. stream
+ans: A. path
+
+Which command installs all dependencies from package.json?
+A. npm install
+B. npm start
+C. npm update
+D. node install
+ans: A. npm install
+
+Which module is NOT built-in in Node.js?
+A. express
+B. http
+C. fs
+D. path
+ans: A. express
+
+What does process.env provide?
+A. Environment variables
+B. Filesystem access
+C. Logs
+D. Config data
+ans: A. Environment variables
+
+Which port is commonly used for Node.js servers?
+A. 3000
+B. 80
+C. 21
+D. 22
+ans: A. 3000
+
+How can you start a Node.js app named app.js?
+A. node app.js
+B. npm app.js
+C. node start app.js
+D. run app.js
+ans: A. node app.js
+
+Which keyword is used for asynchronous functions?
+A. async
+B. wait
+C. defer
+D. promise
+ans:A. async 
+
+Which statement handles promises easily?
+A. async/await
+B. if/else
+C. try/for
+D. switch
+ans: A. async/await
+
+Which database is commonly used with Node.js?
+A. MongoDB
+B. Oracle
+C. SQLite
+D. Excel
+ans: A. MongoDB
+
+
+What is middleware in Express?
+A. Function that handles requests/responses
+B. Database connector
+C. Frontend framework
+D. API endpoint
+ans: A. Function that handles requests/responses
+
+How do you send JSON data in Express?
+A. res.json()
+B. res.sendText()
+C. res.write()
+D. res.html()
+ans: A. res.json()
+
+🗄️ MySQL Basic Level (25 Questions)
+
+Which of the following is used to create a database in MySQL?
+A. MAKE DATABASE
+B. CREATE DATABASE
+C. BUILD DATABASE
+D. NEW DATABASE
+ans:B. CREATE DATABASE 
+
+Which command is used to view all databases?
+A. SHOW ALL DATABASES
+B. SHOW DATABASES
+C. LIST DATABASES
+D. SELECT DATABASES
+ans: B. SHOW DATABASES
+
+Which of the following is used to select a database?
+A. PICK DATABASE
+B. SET DATABASE
+C. USE database_name
+D. CHOOSE DATABASE
+ans: D. CHOOSE DATABASE
+
+Which keyword is used to retrieve data from a table?
+A. GET
+B. SELECT
+C. FETCH
+D. RETRIEVE
+ans: A. GET
+
+What symbol is used to end a SQL statement in MySQL?
+A. : (colon)
+B. ; (semicolon)
+C. , (comma)
+D. . (dot)
+ans: B. ; (semicolon)
+
+Which clause is used to filter the result set?
+A. ORDER BY
+B. WHERE
+C. GROUP BY
+D. HAVING
+ans: B. WHERE
+
+Which operator is used to combine conditions in SQL?
+A. PLUS
+B. AND / OR
+C. ALSO
+D. WITH
+ans: B. AND / OR
+
+Which function returns the number of rows in a table?
+A. SUM()
+B. COUNT()
+C. TOTAL()
+D. NUMBER()
+ans:B. COUNT() 
+
+Which clause is used to sort the results?
+A. FILTER BY
+B. ORDER BY
+C. GROUP BY
+D. SORT
+ans: B. ORDER BY
+
+Which of the following is NOT a valid MySQL data type?
+A. VARCHAR
+B. INT
+C. STRING
+D. DATE
+ans: C. STRING
+
+What does DML stand for?
+A. Data Modification Language
+B. Data Manipulation Language
+C. Data Management Language
+D. Database Markup Language
+ans: B. Data Manipulation Language
+
+Which command adds new data into a table?
+A. ADD
+B. INSERT INTO
+C. APPEND
+D. PUT
+ans: B. INSERT INTO
+
+Which command is used to remove all records from a table but keeps its structure?
+A. DROP
+B. REMOVE
+C. TRUNCATE
+D. DELETE
+ans: C. TRUNCATE
+
+Which keyword is used to remove duplicate rows from a query result?
+A. NO_DUPLICATE
+B. DISTINCT
+C. UNIQUE
+D. DIFFERENT
+ans: B. DISTINCT
+
+What is the default port number for MySQL?
+A. 1521
+B. 3306
+C. 8080
+D. 5432
+ans: B. 3306
+
+Which MySQL statement is used to modify existing data in a table?
+A. MODIFY
+B. UPDATE
+C. CHANGE
+D. ALTER
+ans:A. MODIFY
+
+The PRIMARY KEY constraint:
+A. Allows duplicate values
+B. Uniquely identifies each record
+C. Can have NULL values
+D. Is optional
+ans: B. Uniquely identifies each record
+
+What does the AUTO_INCREMENT attribute do?
+A. Increases all values automatically
+B. Automatically generates a unique number
+C. Updates rows automatically
+D. Increments date fields
+ans:B. Automatically generates a unique number 
+
+Which statement is used to remove a table from the database?
+A. DELETE TABLE
+B. DROP TABLE
+C. REMOVE TABLE
+D. CLEAR TABLE
+ans: B. DROP TABLE
+
+What is a foreign key?
+A. A key from another programming language
+B. A duplicate primary key
+C. A field that links to the primary key of another table
+D. A unique identifier for foreign users
+ans: C. A field that links to the primary key of another table
+
+Which of the following commands is used to change the structure of a table?
+A. MODIFY TABLE
+B. ALTER TABLE
+C. RENAME TABLE
+D. EDIT TABLE
+ans: B. ALTER TABLE
+
+Which SQL clause is used to group rows that have the same values?
+A. ORDER BY
+B. WHERE
+C. GROUP BY
+D. HAVING
+ans: C. GROUP BY
+
+The HAVING clause is used:
+A. Before WHERE
+B. To filter rows before grouping
+C. To filter groups after grouping
+D. To join tables
+ans: C. To filter groups after grouping
+
+What is the output of SELECT NOW(); ?
+A. Current username
+B. Current date and time
+C. Server name
+D. System version
+ans: B. Current date and time
+
+Which of the following is a valid MySQL engine?
+A. SQLServer
+B. OracleDB
+C. InnoDB
+D. MongoEngine
+ans: C. InnoDB
