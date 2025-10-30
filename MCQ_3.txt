@@ -222,30 +222,35 @@ A. Error
 B. They’re auto-wrapped in resolved Promises
 C. Ignored
 D. They block
+ans: B. They’re auto-wrapped in resolved Promises
 
 In promise chaining, what happens if you forget to return inside a .then()?
 A. The next .then() gets undefined
 B. It waits forever
 C. It skips next .then()
 D. It throws
+ans: A. The next .then() gets undefined
 
 What is a “thenable”?
 A. An object with a then method
 B. A rejected Promise
 C. A callback function
 D. A special Promise type
+ans: A. An object with a then method
 
 Which queue do .then/.catch callbacks go into?
 A. Macrotask / Task queue
 B. Microtask / Job queue
 C. Call stack
 D. Event loop main queue
+ans: B. Microtask / Job queue
 
 Which is processed first: microtask queue or task queue?
 A. Task queue
 B. Microtask queue
 C. Both equally
 D. Depends on timing
+ans: B. Microtask queue
 
 Consider:
 
@@ -259,12 +264,14 @@ A. 1, 2, 3
 B. 1, 3, 2
 C. 3, 1, 2
 D. 2, 1, 3
+ans:A. 1, 2, 3 
 
 Which of these is invalid syntax for making a Promise?
 A. new Promise((resolve, reject) => { … })
 B. Promise((resolve, reject) => { … })
 C. new Promise(function (res, rej) { … })
 D. new Promise(async (res, rej) => { … })
+ans: B. Promise((resolve, reject) => { … })
 
 What will this code output?
 
@@ -277,6 +284,7 @@ A. then
 B. catch err
 C. then catch
 D. Nothing
+ans: B. catch err
 
 What will this output?
 
@@ -289,54 +297,63 @@ A. caught
 B. ok
 C. error
 D. nothing
+ans: B. ok
 
 What does .finally() receive as parameter?
 A. The resolved value
 B. The rejection reason
 C. Neither — it gets no argument
 D. Always undefined
+ans: C. Neither — it gets no argument
 
 Does .finally() return a Promise?
 A. Yes
 B. No
 C. Only if returned inside
 D. Only when used after .catch()
+ans:A. Yes 
 
 What is a correct way to use fetch with async/await?
 A. const data = fetch(url);
 B. const res = await fetch(url); const data = await res.json();
 C. await fetch(url).json()
 D. try fetch(url)
+ans: B. const res = await fetch(url); const data = await res.json();
 
 Can you use await outside an async function?
 A. Yes, always
 B. No (in standard JS)
 C. Only in modules
 D. In callbacks
+ans: B. No (in standard JS)
 
 What is returned by an async function if you return the value 5?
 A. 5
 B. Promise resolved with 5
 C. Rejected promise
 D. Undefined
+ans:B. Promise resolved with 5 
 
 If an async function throws an error, what is returned?
 A. The thrown value
 B. A rejected Promise with that error
 C. Undefined
 D. A resolved Promise
+ans: B. A rejected Promise with that error
 
 In an async function, what happens if you don’t catch the rejection?
 A. It’s silent
 B. The returned Promise rejects, and you can .catch() outside
 C. Program crashes
 D. It resolves with undefined
+ans: B. The returned Promise rejects, and you can .catch() outside
 
 Which is correct to catch errors from multiple awaits?
 A. Use multiple catch statements
 B. Wrap each await separately
 C. Use one try/catch encompassing them
 D. Use .catch() after each
+and: C. Use one try/catch encompassing them
 
 If you do:
 
@@ -351,42 +368,49 @@ A. Promise
 B. 10
 C. undefined
 D. error
+ans:B. 10 
 
 What is the advantage of Promise.allSettled() over Promise.all()?
 A. It rejects immediately
 B. It returns status of all promises whether fulfilled or rejected
 C. It resolves only rejections
 D. It’s faster
+ans:B. It returns status of all promises whether fulfilled or rejected 
 
 What is Promise.any()?
 A. Resolves when the first promise resolves
 B. Rejects when the first rejects
 C. Ignores all resolves
 D. Waits for all
+ans:A. Resolves when the first promise resolves 
 
 If you await a non-Promise value, what happens?
 A. Error
 B. It waits indefinitely
 C. It returns immediately that value
 D. Converts to Promise
+ans: C. It returns immediately that value
 
 What is the term used for deeply nested callbacks?
 A. Callback Lotus
 B. Callback Pyramid / Callback Hell
 C. Callback Chain
 D. Callback Loop
+ans: B. Callback Pyramid / Callback Hell
 
 Which of these is a benefit of Promises over callbacks?
 A. Better error propagation
 B. Easier composition
 C. Cleaner chaining
 D. All of the above
+ans: C. Cleaner chaining
 
 What happens if you throw inside a .then() callback?
 A. The error is swallowed
 B. It rejects the returned Promise, which .catch() can handle
 C. It returns undefined
 D. It breaks chaining
+ans: B. It rejects the returned Promise, which .catch() can handle
 
 What’s the output?
 
@@ -402,36 +426,42 @@ A. ok
 B. err fail
 C. nothing
 D. err undefined
+ans: B. err fail
 
 Is it okay to mix .then() and async/await in same code?
 A. No
 B. Yes, though consistency is preferable
 C. Only in Node.js
 D. Only in browsers
+ans: B. Yes, though consistency is preferable
 
 What is a “deferred” or “promise-deferred” pattern?
 A. A Promise that never resolves
 B. A wrapper with externally accessible resolve/reject
 C. A callback disguised as Promise
 D. Another name for .finally()
+ans: B. A wrapper with externally accessible resolve/reject
 
 Which of these is false about .then()?
 A. It accepts two callbacks (onFulfilled, onRejected)
 B. It always returns a new Promise
 C. It blocks until resolution
 D. It chains
+ans: C. It blocks until resolution
 
 Which of the following is true about unhandled promise rejections?
 A. They always crash the program
 B. They may lead to warnings or errors depending on environment
 C. They are silently ignored always
 D. They convert to fulfill
+ans:B. They may lead to warnings or errors depending on environment
 
 What does the term “Promise composition” mean?
 A. Combining multiple promises in logic
 B. Sorting promises
 C. Rewriting promises to callbacks
 D. Canceling promises
+ans: A. Combining multiple promises in logic
 
 Suppose you have:
 
@@ -783,4 +813,5 @@ f().catch(e => console.log(e));
 A. err
 B. nothing
 C. Promise
+
 D. undefined
